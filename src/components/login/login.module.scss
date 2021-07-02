@@ -1,0 +1,25 @@
+@import "../../styles/styles.scss";
+
+.login {
+  background-color: $bg-color;
+}
+
+.loginForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.loginForm section {
+  display: flex;
+  justify-content: center;
+}
+
+.loginMsg {
+  flex-direction: column;
+  h4 {
+    margin: 20px;
+    color: $error-color;
+  }
+}

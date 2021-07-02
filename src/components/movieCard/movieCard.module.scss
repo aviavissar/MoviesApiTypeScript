@@ -1,0 +1,50 @@
+@import "../../styles/styles.scss";
+
+.media {
+  height: 140px;
+}
+
+div.root {
+  width: 300px;
+  height: 280px;
+  background-color: $secondary-color;
+  border: 1px solid $forecast-container;
+  padding: 5px;
+  margin: 5px 5px 20px 5px;
+}
+.title {
+  font-size: 0.8rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.CardContent {
+  height: 80px;
+  padding: 5px 16px;
+}
+.cardActions {
+  height: 50px;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  div.root {
+    width: 350px;
+    height: 280px;
+    margin: 0px 10px 20px 11px;
+  }
+}
+@media screen and (max-width: $bigMobile-breakpoint) {
+  div.root {
+    width: 350px;
+    height: 280px;
+    margin: 0px 10px 20px 11px;
+  }
+}
+@media screen and (max-width: $smallMobile-breakpoint) {
+  div.root {
+    width: 340px;
+    height: 280px;
+    margin: 0px 10px 20px 11px;
+  }
+}

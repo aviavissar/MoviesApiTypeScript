@@ -1,0 +1,76 @@
+{
+    "Search": [
+        {
+            "Title": "B.O.O.: Bureau of Otherworldly Operations",
+            "Year": "2015",
+            "imdbID": "tt2386478",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Peek-a-Boo",
+            "Year": "2012",
+            "imdbID": "tt2403462",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Break-Up Boo Boo",
+            "Year": "2012",
+            "imdbID": "tt2417642",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "My Boo",
+            "Year": "2012",
+            "imdbID": "tt2562702",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjFlMGI5MDEtNGNhNS00ZDczLTlhYTktN2JlNDY0YTQ5MjU1XkEyXkFqcGdeQXVyMjUwOTQ4NTc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Peek-A-Boo Card",
+            "Year": "2011",
+            "imdbID": "tt2618862",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Peek-A-Boo",
+            "Year": "2015",
+            "imdbID": "tt4925164",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Boo!",
+            "Year": "2014",
+            "imdbID": "tt4291672",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Betty Boo",
+            "Year": "2015",
+            "imdbID": "tt4386910",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMTc0OTEyNjkwM15BMl5BanBnXkFtZTgwNzczMDIyNTE@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Peek A Boo",
+            "Year": "2015",
+            "imdbID": "tt4483462",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Who Stole My Hoo-to Foo-to Boo-to Bah?",
+            "Year": "2015",
+            "imdbID": "tt4621350",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMzZhMThjMWMtZjNlZC00MjZjLWExYWItMDk2NzdhZDI2YzhjXkEyXkFqcGdeQXVyNjAxMzAxMDE@._V1_SX300.jpg"
+        }
+    ],
+    "totalResults": "135",
+    "Response": "True"
+}

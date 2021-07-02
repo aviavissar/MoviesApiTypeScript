@@ -1,0 +1,73 @@
+@import "../../styles/styles.scss";
+
+div.popDialog div {
+  max-width: initial !important;
+}
+div.root {
+  //min-height: fit-content;
+  width: 800px;
+  background-color: $secondary-color;
+  border: 1px solid $forecast-container;
+  padding: 50px;
+  overflow: auto;
+  box-shadow: inset 0px 2px 60px 0px #00000042;
+}
+div.media {
+  height: 400px;
+  margin-right: 50px;
+  width: 48%;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  border: 1px solid $forecast-container;
+}
+
+.CardContent {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 16px;
+  display: flex;
+}
+.cardActions {
+  height: 50px;
+  justify-content: center;
+}
+.CardArticle {
+  width: 52%;
+}
+div.popTitle,
+div.subTitle {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 5px 0px;
+}
+div.subTitle h2 {
+  color: $sub-color;
+  font-size: $font-size-l;
+}
+div.popTitle h2 {
+  color: $primary-color;
+  font-size: $font-size-xl;
+  font-weight: 600;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-size: medium;
+}
+@media screen and (max-width: $tablet-breakpoint) {
+  div.root {
+    width: 100%;
+    padding: 0px;
+  }
+  div.popTitle h2 {
+    
+    font-size: 70%;
+    font-weight: 600;
+  }
+  div.subTitle h2 {
+    color: $sub-color;
+    font-size: $font-size-l;
+  }
+}

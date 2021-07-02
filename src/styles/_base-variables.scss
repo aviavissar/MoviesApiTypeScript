@@ -1,0 +1,34 @@
+// Font family
+$primary-font:-apple-system, BlinkMacSystemFont,'Helvetica Neue', "Roboto", "Open Sans", sans-serif;
+$secondary-font: "Roboto Slab", "Raleway", "Open Sans", serif;
+
+
+// Color Variables
+$sub-color: #a0a0a0;
+$primary-color: #444444;
+$secondary-color: #ffffff;
+$forecast-container: #cecece;
+$bg-color: #f7f7f7;
+$error-color: red;
+
+// Grid system
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+//font size
+$font-size-xl: 2rem;
+$font-size-l: 1.4rem;
+$font-size-m: 1rem;
+
+// Spacing
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+$desktop-breakpoint: 45rem;
+
+//breakpoint
+$desktop-breakpoint: 1920px;
+$tablet-breakpoint: 768px;
+$bigMobile-breakpoint: 375px;
+$smallMobile-breakpoint: 360px;

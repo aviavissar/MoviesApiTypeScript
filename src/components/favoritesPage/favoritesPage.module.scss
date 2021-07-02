@@ -1,0 +1,13 @@
+@import "../../styles/styles.scss";
+.favorites {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    margin: 30px 0 50px 17px;
+  }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: $font-size-l;
+    }
+  }
+}

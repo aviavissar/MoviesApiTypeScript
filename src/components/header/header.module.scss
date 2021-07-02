@@ -1,0 +1,57 @@
+@import "../../styles/styles.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding: 20px 40px;
+}
+.menu {
+  display: flex;
+  width: 40%;
+  justify-content: flex-end;
+}
+.logout {
+  color: #777;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  text-transform: capitalize;
+}
+.username {
+  display: flex;
+}
+.menu a h4 {
+  margin-right: 20px;
+  font-size: $font-size-l;
+  &:hover {
+    color: darken($sub-color, 20%);
+  }
+  &:active {
+    color: darken($sub-color, 20%);
+  }
+}
+div h4 {
+  font-size: $font-size-l;
+}
+
+@media screen and (max-width: $tablet-breakpoint) {
+  .menu a h4 {
+    font-size: $font-size-m;
+  }
+  div h4 {
+    font-size: $font-size-l;
+  }
+}
+@media screen and (max-width: $bigMobile-breakpoint) {
+  .logout{
+    margin: initial;
+    font-size: 12px;
+  }
+  .header {
+    margin-bottom: 0px;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: $smallMobile-breakpoint) {
+}
