@@ -6,7 +6,7 @@ export const fetchMoviesArr = async (query = "") => {
         return "space";
       }
       const response = await fetch(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=f2de5c87&page=10&s=${query}`
+        `http://www.omdbapi.com/?apikey=f2de5c87&page=10&s=${query}`
       );
 
       return await response.json();
