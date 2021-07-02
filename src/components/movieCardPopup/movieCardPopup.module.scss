@@ -33,7 +33,7 @@ div.media {
   height: 50px;
   justify-content: center;
 }
-.CardArticle {
+article.CardArticle {
   width: 52%;
 }
 div.popTitle,
@@ -61,13 +61,28 @@ button {
     width: 100%;
     padding: 0px;
   }
+}
+@media screen and (max-width: $bigMobile-breakpoint) {
   div.popTitle h2 {
-    
     font-size: 70%;
-    font-weight: 600;
   }
   div.subTitle h2 {
-    color: $sub-color;
-    font-size: $font-size-l;
+    font-size: 90%;
+  }
+  article.CardArticle {
+    font-size: 70%;
+  }
+  div.media {
+    height: 200px;
+    margin-right: 10px;
+  }
+  button {
+    font-size: 90%;
+  }
+  .CardContent {
+    padding: 5px;
+  }
+  .CardHeader {
+    padding: 10px !important;
   }
 }

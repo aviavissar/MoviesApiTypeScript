@@ -1,7 +1,7 @@
 import React, { useState, createContext, useContext, useEffect } from "react";
-import { useStorage, StorageType } from "./hooks/useStorage";
-import history from "./services/history";
-import { IMovieCard } from "./components/movieCard/movieCard.component";
+import { useStorage, StorageType } from "../hooks/useStorage";
+import history from "../services/history";
+import { IMovieCard } from "../components/movieCard/movieCard.component";
 
 interface IProfile {
   name: string;

@@ -6,9 +6,9 @@ export enum StorageType {
   SessionStorage,
 }
 
-export const useStorage = (
+export const useStorage = <T extends any=any>(
   key: string,
-  initialValue: any,
+  initialValue: T,
   storageType: StorageType
 ) => {
   const [storedValue, setStoredValue] = useState<any>(() => {

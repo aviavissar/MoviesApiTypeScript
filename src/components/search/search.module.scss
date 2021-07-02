@@ -8,7 +8,7 @@
     margin-top: -26px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    border: 1px solid #cecece;
+    border: 1px solid $forecast-container;
     border-top: none;
     display: none;
   }
@@ -19,8 +19,8 @@
   input[type="text"] {
     width: 94%;
     padding: 20px;
-    background: #f7f7f7;
-    border: 1px solid #cecece;
+    background: $bg-color;
+    border: 1px solid $forecast-container;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -36,4 +36,14 @@
   font-size: $font-size-m;
   margin: 50px;
   color: $error-color;
+}
+@media screen and (max-width: $tablet-breakpoint) {
+  .search input[type="text"] {
+    width: 82%;
+  }
+}
+@media screen and (max-width: $bigMobile-breakpoint) {
+  .search input[type="text"] {
+    width: 92%;
+  }
 }

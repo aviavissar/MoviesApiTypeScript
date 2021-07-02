@@ -16,16 +16,13 @@ export interface IMovieCard {
   imdbID: string;
 }
 
-export interface IMovieCardProps {
-  Title: string;
-  Year: string;
-  Poster: string;
-  imdbID: string;
+export interface IMovieCardProps extends IMovieCard{
+ 
   isFavoritesList: boolean;
-  addToFavorites?: (i:any) => void;
+  addToFavorites?: (i: {}) => void;
   removeFavorites?: (s: string) => void;
 }
-const MovieCard = ({
+const MovieCard : React.FC<IMovieCardProps>  = ({
   Title,
   Year,
   Poster,

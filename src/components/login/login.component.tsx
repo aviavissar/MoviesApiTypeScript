@@ -1,15 +1,17 @@
-import { useRef, useState ,KeyboardEvent} from "react";
+import { useRef, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styles from "./login.module.scss";
-import { useStore } from "../../App.store";
+import { useStore } from "../../store/App.store";
 import history from "../../services/history";
 
-type Props = {
+export interface ILoginProps {
   loginMsg?: string;
-};
+}
 
-const Login = ({ loginMsg = "please login by filling your name" }: Props) => {
+const Login: React.FC<ILoginProps> = ({
+  loginMsg = "please login by filling your name",
+}: ILoginProps) => {
   const { setUserProfile } = useStore();
   const usernameRef = useRef<any>(null);
   const [errorMsg, setErrorMsg] = useState<string>("");
@@ -26,7 +28,6 @@ const Login = ({ loginMsg = "please login by filling your name" }: Props) => {
     }
   };
 
- 
   return (
     <div className="login">
       <form className={styles.loginForm} noValidate autoComplete="off">

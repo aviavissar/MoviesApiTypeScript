@@ -1,14 +1,14 @@
 import styles from "./favoritesPage.module.scss";
 import Header from "../header/header.component";
-import { useStore } from "../../App.store";
+import { useStore } from "../../store/App.store";
 import Card from "../movieCard/movieCard.component";
 import Grid from "@material-ui/core/Grid";
 import { useStorage, StorageType } from "../../hooks/useStorage";
 import { IMovieCard } from "../movieCard/movieCard.component";
 
-const FavoritesPage = () => {
+const FavoritesPage: React.FC = () => {
   const { userProfile } = useStore();
-  const [favorites, setFavorites] = useStorage(
+  const [favorites, setFavorites] = useStorage<IMovieCard[]>(
     "zeekitAppFavorites_" + userProfile.name,
     [],
     StorageType.LocalStorage
@@ -30,20 +30,25 @@ const FavoritesPage = () => {
           <Grid item xs={12}>
             <Grid container justify="flex-start" spacing={2}>
               {favorites
-                ? favorites.map(({ Title, Year, Poster, imdbID }: IMovieCard, index:number) => {
-                    return (
-                      <Grid key={`${imdbID}#${index + 1}`} item>
-                        <Card
-                          removeFavorites={removeFavorites}
-                          Title={Title}
-                          Year={Year}
-                          Poster={Poster}
-                          imdbID={imdbID}
-                          isFavoritesList={true}
-                        />
-                      </Grid>
-                    );
-                  })
+                ? favorites.map(
+                    (
+                      { Title, Year, Poster, imdbID }: IMovieCard,
+                      index: number
+                    ) => {
+                      return (
+                        <Grid key={`${imdbID}#${index + 1}`} item>
+                          <Card
+                            removeFavorites={removeFavorites}
+                            Title={Title}
+                            Year={Year}
+                            Poster={Poster}
+                            imdbID={imdbID}
+                            isFavoritesList={true}
+                          />
+                        </Grid>
+                      );
+                    }
+                  )
                 : ""}
             </Grid>
           </Grid>

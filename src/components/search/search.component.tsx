@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import { fetchMoviesArr } from "../../services/fetch";
 import useDebounce from "../../hooks/useDebounce";
 import styles from "./search.module.scss";
-import { useStore } from "../../App.store";
+import { useStore } from "../../store/App.store";
 
 export interface ISearchProps {
   searchIsON: (bool: boolean) => void;
   loaderIsON: (bool: boolean) => void;
 }
 
-const Search = ({ searchIsON, loaderIsON }: ISearchProps) => {
+const Search: React.FC<ISearchProps> = ({
+  searchIsON,
+  loaderIsON,
+}: ISearchProps) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [errorMsg, setErrorMsg] = useState<string>("");
   const [selectedDisplay, setSelectedDisplay] = useState<string>("");

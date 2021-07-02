@@ -1,11 +1,11 @@
-import {  useState } from "react";
+import { useState } from "react";
 import Header from "../header/header.component";
 import Search from "../search/search.component";
 import Movies from "../movies/movies.component";
 import styles from "./home.module.scss";
-import { useStore } from "../../App.store";
+import { useStore } from "../../store/App.store";
 
-const Home = () => {
+const Home: React.FC = () => {
   const { itemsArray } = useStore();
   const [searchON, setSearchON] = useState<boolean>(false);
   const [loaderON, setLoaderON] = useState<boolean>(false);

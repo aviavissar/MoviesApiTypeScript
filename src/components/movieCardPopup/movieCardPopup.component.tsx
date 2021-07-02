@@ -31,11 +31,11 @@ export interface IPopupObj {
   Plot: string;
 }
 
-export default function MovieCardPopup({
+const MovieCardPopup: React.FC<IMovieCardPopup> = ({
   imdbID,
   isOpen,
   closeOpenComponent,
-}: IMovieCardPopup) {
+}: IMovieCardPopup) => {
   const [open, setOpen] = useState<boolean>(true);
   const [pop, setPop] = useState<IPopupObj | null>(null);
   const [isFullPlot, setIsFullPlot] = useState<boolean>(false);
@@ -44,6 +44,10 @@ export default function MovieCardPopup({
     setOpen(isOpen);
     doAsyncFetchMovie();
   }, [isOpen]);
+
+  useEffect(() => {
+    console.log(pop);
+  }, [pop]);
 
   const doAsyncFetchMovie = async (plot = "short") => {
     setPop(await fetchMovie(imdbID, plot));
@@ -72,6 +76,7 @@ export default function MovieCardPopup({
         >
           <Card className={styles.root}>
             <CardHeader
+              className={styles.CardHeader}
               title={<Title className={styles.popTitle}>{pop.Title}</Title>}
               subheader={<Title className={styles.subTitle}>{pop.Year}</Title>}
             />
@@ -100,4 +105,5 @@ export default function MovieCardPopup({
       ) : null}
     </div>
   );
-}
+};
+export default MovieCardPopup;

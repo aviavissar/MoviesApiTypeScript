@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import AppRouter from "./routers/mainRouter";
-import { AppProvider } from "./App.store";
+import { AppProvider } from "./store/App.store";
 import "./styles/styles.scss";
 
 

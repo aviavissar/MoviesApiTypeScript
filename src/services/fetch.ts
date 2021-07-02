@@ -20,10 +20,12 @@ export const fetchMoviesArr = async (query = "good") => {
 };
 
 export const fetchMovie = async (id: string, plotSize = "short") => {
+  console.log("hearrrr");
   try {
     const response = await fetch(
       `http://www.omdbapi.com/?i=${id}&plot=${plotSize}&apikey=f2de5c87`
     );
+    console.log("hearrrr", response);
     return await response.json();
   } catch (error) {
     throw error;
