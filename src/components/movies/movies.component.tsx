@@ -26,7 +26,7 @@ const Movies: React.FC<IMovieProps> = ({ itemsArray }: IMovieProps) => {
 
   return (
     <div className={styles.selectboxitems}>
-      <Grid container className={styles.root} spacing={2}>
+      <Grid container className={styles.root} >
         <Grid item xs={12}>
           <Grid container justify="center" spacing={1}>
             {itemsArray.length > 0

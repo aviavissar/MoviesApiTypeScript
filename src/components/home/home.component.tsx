@@ -8,7 +8,7 @@ import { useStore } from "../../store/App.store";
 const Home: React.FC = () => {
   const { itemsArray } = useStore();
   const [searchON, setSearchON] = useState<boolean>(false);
-  const [loaderON, setLoaderON] = useState<boolean>(false);
+  const [loaderON, setLoaderON] = useState<boolean>(true);
 
   const searchIsON = (bool: boolean) => {
     setSearchON(bool);

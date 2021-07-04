@@ -28,6 +28,7 @@ const Search: React.FC<ISearchProps> = ({
       };
       doAsyncFetch();
       searchIsON(true);
+      loaderIsON(true);
     } else {
       searchIsON(false);
       setItemsArray([]);

@@ -24,11 +24,11 @@ const FavoritesPage: React.FC = () => {
       <div>
         <Header />
       </div>
-      <div className="row">
+      <div className={styles.content}>
         <h1>My Favorites</h1>
-        <Grid container className={styles.root} spacing={2}>
+        <Grid container className={styles.root}>
           <Grid item xs={12}>
-            <Grid container justify="flex-start" spacing={2}>
+            <Grid container justify="flex-start" >
               {favorites
                 ? favorites.map(
                     (

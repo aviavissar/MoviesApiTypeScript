@@ -1,9 +1,28 @@
 @import "../../styles/styles.scss";
 
 .root {
-  flex-grow: 1;
+  flex-grow: 1;padding: 2px 40px;
 }
 .card {
   height: 140px;
   width: 100px;
+}
+@media screen and (max-width: $tablet-breakpoint) {
+  .menu a h4 {
+    font-size: $font-size-m;
+  }
+  div h4 {
+    font-size: 100%;
+  }
+  .username {
+   margin-left: 25px;
+    
+  }
+}
+@media screen and (max-width: $bigMobile-breakpoint) {
+  .root {
+    padding: 2px 40px;
+  }
+}
+@media screen and (max-width: $smallMobile-breakpoint) {
 }

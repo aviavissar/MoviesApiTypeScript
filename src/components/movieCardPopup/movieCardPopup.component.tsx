@@ -81,11 +81,7 @@ const MovieCardPopup: React.FC<IMovieCardPopup> = ({
               subheader={<Title className={styles.subTitle}>{pop.Year}</Title>}
             />
             <CardContent className={styles.CardContent}>
-              <CardMedia
-                className={styles.media}
-                image={pop.Poster}
-                title={pop.Title}
-              />
+              
               <Typography
                 variant="body1"
                 color="textSecondary"
@@ -99,6 +95,11 @@ const MovieCardPopup: React.FC<IMovieCardPopup> = ({
                   </button>
                 </CardActions>
               </Typography>
+              <CardMedia
+                className={styles.media}
+                image={pop.Poster}
+                title={pop.Title}
+              />
             </CardContent>
           </Card>
         </Dialog>

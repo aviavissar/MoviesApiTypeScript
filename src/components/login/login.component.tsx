@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState} from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styles from "./login.module.scss";
@@ -17,14 +17,21 @@ const Login: React.FC<ILoginProps> = ({
   const [errorMsg, setErrorMsg] = useState<string>("");
 
   const doLogin = () => {
+    if (usernameRef.current.value.length < 2) {
+      setErrorMsg("your name must be at least 2 characters");
+      return;
+    }
     if (usernameRef.current.value !== "") {
       setUserProfile({ name: usernameRef.current.value, isConnected: true });
       history.push("/home");
-    }
-    if (usernameRef.current.value.length < 2) {
-      setErrorMsg("your name must be at least 2 characters");
     } else {
       setErrorMsg("you must put your name");
+    }
+  };
+  const handleEnter = (e: any) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      doLogin();
     }
   };
 
@@ -43,6 +50,7 @@ const Login: React.FC<ILoginProps> = ({
             label="your name"
             variant="outlined"
             inputRef={usernameRef}
+            onKeyDown={handleEnter}
           />
           <Button variant="contained" color="primary" onClick={doLogin}>
             login

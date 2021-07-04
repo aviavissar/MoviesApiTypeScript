@@ -41,22 +41,37 @@ h6 {
 .site-content {
   margin: 0 auto;
   width: 1010px;
-  min-height: 1009px;
+  min-height: 800px;
   padding-top: 20px;
+  overflow: auto;
 }
+
 
 @media screen and (max-width: $tablet-breakpoint) {
   .site-content {
-    width: $tablet-breakpoint;
+    min-height: 1026px;
+    width: 100%;
   }
 }
 @media screen and (max-width: $bigMobile-breakpoint) {
+  //414
   .site-content {
-    width: $bigMobile-breakpoint;
+    min-height: 736px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .site-content {
+    min-height: 667px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .site-content {
+    min-height: 640px;
   }
 }
 @media screen and (max-width: $smallMobile-breakpoint) {
+  //320
   .site-content {
-    width: $smallMobile-breakpoint;
+    min-height: 568px;
   }
 }

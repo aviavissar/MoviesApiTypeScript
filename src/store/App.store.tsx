@@ -40,6 +40,8 @@ const AppProvider = ({ children }: Props) => {
   useEffect(() => {
     if (userProfile.isConnected) {
       history.push("/home");
+    }else{
+      history.push("/");
     }
   }, [userProfile]);
 

@@ -20,6 +20,7 @@
 }
 .username {
   display: flex;
+  
 }
 .menu a h4 {
   margin-right: 20px;
@@ -40,7 +41,11 @@ div h4 {
     font-size: $font-size-m;
   }
   div h4 {
-    font-size: $font-size-l;
+    font-size: 100%;
+  }
+  .username {
+   margin-left: 25px;
+    
   }
 }
 @media screen and (max-width: $bigMobile-breakpoint) {
@@ -50,8 +55,16 @@ div h4 {
   }
   .header {
     margin-bottom: 0px;
-    padding: 15px;
+    padding: 20px;
   }
+  .menu a h4 {
+    font-size: 90%;
+    margin-right: 10px;
+  }
+  .username {
+    margin-left: 3px;
+     
+   }
 }
 @media screen and (max-width: $smallMobile-breakpoint) {
 }

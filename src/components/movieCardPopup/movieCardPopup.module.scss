@@ -86,3 +86,9 @@ button {
     padding: 10px !important;
   }
 }
+@media screen and (max-width: $smallMobile-breakpoint) {
+  div.media {
+    height: 149px;
+    margin-right: 10px;
+  }
+}
