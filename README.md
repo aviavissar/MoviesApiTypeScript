@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# MoviesApi
+## fetch movies infotmation from omdbapi api and display
+### React & TypeScript
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### The requirements
+App 
+• First page will be login page with name input and button. If the user already signup it will be  redirect to next page automatically (sessionStorage).  
+• The second page will contain the name he enters at the top, a button to see favorite movies  and a single search box in the middle.  
+• Once the user enters text (preferably without require to click ‘enter’) the search box is moved  to the top of the screen and there is a loader.  
+• Once the search query return, we want a grid of cards for each movie that match the search,  or an empty state if no movie is found.  
+• Every time the user changes the text in the search box the current results should be cleared,  if the user clears the search text the search box should return to the middle of the screen like  the user did a refresh on the page.  
+• Each card search result should have a photo, the name of the movie, its year, and a favorite  button.  
+• When clicking on a card, there should be a pop-up with the movie photo, name, year, short  plot, and a button to expand to the full plot). 
+• When clicking on the favorite button, save or remove the movie from the sessionStorage. • the user can see all his favorite movies if he clicks the favorite button at the top. 
+Implementation Details 
+Your application should be responsive (use SCSS) with appropriate handling of at least three breakpoints: desktop, tablet (portrait), and mobile (portrait). 
+It is entirely up to you how you display the app UI and data for each breakpoint. 
 
-## Available Scripts
+
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
