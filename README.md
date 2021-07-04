@@ -1,6 +1,6 @@
-# wheather app 
+# MoviesApi
 ## fetch movies infotmation from omdbapi api and display
-### react type script
+### React & TypeScript
 
 ### The requirements
 App 
