@@ -1,5 +1,5 @@
 # MoviesApi
-## fetch movies infotmation from omdbapi api and display
+## fetch movies infotmation from omdb api and display
 ### React & TypeScript
 
 ### The requirements
