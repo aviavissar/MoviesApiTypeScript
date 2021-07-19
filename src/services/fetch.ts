@@ -1,9 +1,10 @@
+const KEY="";
 export const fetchMoviesArr = async (query = "") => {
   try {
     if (query.length > 2) {
       query = query.trim();
       const response = await fetch(
-        `https://www.omdbapi.com/?apikey=f2de5c87&s=${query}`
+        `https://www.omdbapi.com/?apikey=${KEY}&s=${query}`
       );
 
       return await response.json();
@@ -19,7 +20,7 @@ export const fetchMoviesArr = async (query = "") => {
 export const fetchMovie = async (id: string, plotSize = "short") => {
   try {
     const response = await fetch(
-      `https://www.omdbapi.com/?i=${id}&plot=${plotSize}&apikey=f2de5c87`
+      `https://www.omdbapi.com/?i=${id}&plot=${plotSize}&apikey=${KEY}`
     );
 
     return await response.json();
