@@ -2,12 +2,14 @@ import { useStore } from "../../store/App.store";
 import { Link } from "react-router-dom";
 import styles from "./header.module.scss";
 import history from "../../services/history";
+import { setLocalStorage } from "../../services/storage";
 
 const Header: React.FC = () => {
   const { userProfile, setUserProfile } = useStore();
 
   const doLogout = () => {
-    setUserProfile({ name: "", isConnected: false });
+    setUserProfile({ name: "", isConnected: false, favorites: [] });
+    setLocalStorage(`moviesApp-connectedProfile`, null);
     history.push("/");
   };
 

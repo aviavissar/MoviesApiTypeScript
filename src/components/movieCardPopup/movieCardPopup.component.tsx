@@ -45,10 +45,7 @@ const MovieCardPopup: React.FC<IMovieCardPopup> = ({
     doAsyncFetchMovie();
   }, [isOpen]);
 
-  useEffect(() => {
-    console.log(pop);
-  }, [pop]);
-
+  
   const doAsyncFetchMovie = async (plot = "short") => {
     setPop(await fetchMovie(imdbID, plot));
   };

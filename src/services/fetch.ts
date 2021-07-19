@@ -2,11 +2,8 @@ export const fetchMoviesArr = async (query = "") => {
   try {
     if (query.length > 2) {
       query = query.trim();
-      if (query.indexOf(" ") >= 0) {
-        return "space";
-      }
       const response = await fetch(
-        `https://www.omdbapi.com/?apikey=f2de5c87&page=10&s=${query}`
+        `https://www.omdbapi.com/?apikey=f2de5c87&s=${query}`
       );
 
       return await response.json();

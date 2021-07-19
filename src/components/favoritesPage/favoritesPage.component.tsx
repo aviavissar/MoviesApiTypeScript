@@ -3,21 +3,10 @@ import Header from "../header/header.component";
 import { useStore } from "../../store/App.store";
 import Card from "../movieCard/movieCard.component";
 import Grid from "@material-ui/core/Grid";
-import { useStorage, StorageType } from "../../hooks/useStorage";
 import { IMovieCard } from "../movieCard/movieCard.component";
 
 const FavoritesPage: React.FC = () => {
-  const { userProfile } = useStore();
-  const [favorites, setFavorites] = useStorage<IMovieCard[]>(
-    "zeekitAppFavorites_" + userProfile.name,
-    [],
-    StorageType.LocalStorage
-  );
-
-  const removeFavorites = (id: string) => {
-    const temp = favorites.filter(({ imdbID }: IMovieCard) => id !== imdbID);
-    setFavorites(temp);
-  };
+  const { favorites } = useStore();
 
   return (
     <div className={styles.favorites}>
@@ -28,8 +17,8 @@ const FavoritesPage: React.FC = () => {
         <h1>My Favorites</h1>
         <Grid container className={styles.root}>
           <Grid item xs={12}>
-            <Grid container justify="flex-start" >
-              {favorites
+            <Grid container justify="flex-start">
+              {favorites.length> 0
                 ? favorites.map(
                     (
                       { Title, Year, Poster, imdbID }: IMovieCard,
@@ -38,7 +27,6 @@ const FavoritesPage: React.FC = () => {
                       return (
                         <Grid key={`${imdbID}#${index + 1}`} item>
                           <Card
-                            removeFavorites={removeFavorites}
                             Title={Title}
                             Year={Year}
                             Poster={Poster}
@@ -49,7 +37,7 @@ const FavoritesPage: React.FC = () => {
                       );
                     }
                   )
-                : ""}
+                :<div className={styles.noFavorites}> No Favorites</div>}
             </Grid>
           </Grid>
         </Grid>

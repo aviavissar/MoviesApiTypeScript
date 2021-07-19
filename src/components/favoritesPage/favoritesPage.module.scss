@@ -5,7 +5,9 @@
   h1 {
     margin: 30px 0 50px 17px;
   }
-
+  .noFavorites {
+    padding: 100px;
+  }
   @media screen and (max-width: $tablet-breakpoint) {
     .content {
       padding: 0 20px;
@@ -16,5 +18,18 @@
     }
   }
   @media screen and (max-width: $bigMobile-breakpoint) {
+    h1 {
+      margin: 30px 0 50px 17px;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: $smallMobile-breakpoint) {
+    div.media {
+      height: 149px;
+      margin-right: 10px;
+    }
+    .content {
+      padding: 0 10px;
+    }
   }
 }

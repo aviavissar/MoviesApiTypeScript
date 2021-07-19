@@ -1,9 +1,11 @@
-import { useRef, useState} from "react";
+import { useRef, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import styles from "./login.module.scss";
 import { useStore } from "../../store/App.store";
 import history from "../../services/history";
+import { IMovieCard } from "../movieCard/movieCard.component";
+import { getLocalStorage, setLocalStorage } from "../../services/storage";
 
 export interface ILoginProps {
   loginMsg?: string;
@@ -12,7 +14,7 @@ export interface ILoginProps {
 const Login: React.FC<ILoginProps> = ({
   loginMsg = "please login by filling your name",
 }: ILoginProps) => {
-  const { setUserProfile } = useStore();
+  const { setUserProfile, setFavorites } = useStore();
   const usernameRef = useRef<any>(null);
   const [errorMsg, setErrorMsg] = useState<string>("");
 
@@ -22,12 +24,29 @@ const Login: React.FC<ILoginProps> = ({
       return;
     }
     if (usernameRef.current.value !== "") {
-      setUserProfile({ name: usernameRef.current.value, isConnected: true });
+      const userLocalStorage = getLocalStorage(
+        `moviesApp-${usernameRef.current.value}`
+      );
+      console.log("userLocalStorage");
+      let user = {
+        name: usernameRef.current.value,
+        isConnected: true,
+        favorites: [] as IMovieCard[],
+      };
+      if (userLocalStorage !== null) {
+        user = userLocalStorage;
+      }
+
+      setLocalStorage(`moviesApp-${usernameRef.current.value}`, user);
+      setLocalStorage(`moviesApp-connectedProfile`, user);
+      setUserProfile(user);
+      setFavorites(user.favorites);
       history.push("/home");
     } else {
       setErrorMsg("you must put your name");
     }
   };
+
   const handleEnter = (e: any) => {
     if (e.key === "Enter") {
       e.preventDefault();

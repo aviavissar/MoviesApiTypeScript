@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import MovieCardPopup from "../movieCardPopup/movieCardPopup.component";
+import { useStore } from "../../store/App.store";
 
 export interface IMovieCard {
   Title: string;
@@ -16,29 +17,37 @@ export interface IMovieCard {
   imdbID: string;
 }
 
-export interface IMovieCardProps extends IMovieCard{
- 
+export interface IMovieCardProps extends IMovieCard {
   isFavoritesList: boolean;
   addToFavorites?: (i: {}) => void;
   removeFavorites?: (s: string) => void;
 }
-const MovieCard : React.FC<IMovieCardProps>  = ({
+const MovieCard: React.FC<IMovieCardProps> = ({
   Title,
   Year,
   Poster,
   imdbID,
   isFavoritesList,
-  addToFavorites,
-  removeFavorites,
 }: IMovieCardProps) => {
   const [display, setDisplay] = useState<boolean>(false);
-
+  const { favorites, setFavorites } = useStore();
   const openPopUP = () => {
     setDisplay(true);
   };
 
   const closeOpenComponent = () => {
     setDisplay(false);
+  };
+
+  const addToFavorites = (item: any) => {
+    if (item) {
+      setFavorites((prev: IMovieCard[]) => [...prev, item]);
+    }
+  };
+
+  const removeFavorites = (id: string) => {
+    const temp = favorites.filter(({ imdbID }: IMovieCard) => id !== imdbID);
+    setFavorites(temp);
   };
 
   const addRemoveFavorites = (isFavoritesList: boolean, imdbID: string) => {

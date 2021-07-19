@@ -43,11 +43,7 @@ const Search: React.FC<ISearchProps> = ({
       setErrorMsg("you must put more than two letters");
       return;
     }
-    if (response === "space") {
-      setItemsArray([]);
-      setErrorMsg("you must put only one word");
-      return;
-    }
+
     if (response.Response == "False") {
       setItemsArray([]);
       setErrorMsg("Movie not found!");

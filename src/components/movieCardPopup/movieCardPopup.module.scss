@@ -20,7 +20,7 @@ div.media {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  border: 1px solid $forecast-container;
+ 
 }
 
 .CardContent {
@@ -35,6 +35,7 @@ div.media {
 }
 article.CardArticle {
   width: 52%;
+  padding-right: 20px;
 }
 div.popTitle,
 div.subTitle {
@@ -59,7 +60,7 @@ button {
 @media screen and (max-width: $tablet-breakpoint) {
   div.root {
     width: 100%;
-    padding: 0px;
+    padding: 10px;
   }
 }
 @media screen and (max-width: $bigMobile-breakpoint) {
@@ -71,6 +72,7 @@ button {
   }
   article.CardArticle {
     font-size: 70%;
+   
   }
   div.media {
     height: 200px;
